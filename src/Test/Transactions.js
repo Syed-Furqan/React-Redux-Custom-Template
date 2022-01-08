@@ -11,12 +11,8 @@ const Transactions = ({transactions, setTransactions}) => {
         setTransactions([...transactions].sort((a, b) => (a[key] < b[key] ? 1 : -1)));
     }, [key, format]);
 
-    // document.querySelectorAll('.transactions__body-container').forEach((el, i) => {
-    //     el.addEventListener('click', () => {
-    //         document.getElementById(`detail${i}`).classList.add('more-details-display');
-    //     });
-    // });
-
+    
+    
     return (
         <div elevation={10} className="transactions">
             <div className="transactions__header">
