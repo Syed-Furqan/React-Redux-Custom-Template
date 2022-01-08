@@ -1,7 +1,6 @@
 import { CircularProgress } from '@material-ui/core';
 import { useState, useEffect } from 'react';
 import postRequest from '../utils/postRequest';
-import { Paper } from '@material-ui/core';
 import './Test.scss';
 import Transactions from './Transactions';
 

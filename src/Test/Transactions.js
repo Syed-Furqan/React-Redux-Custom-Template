@@ -1,3 +1,7 @@
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { formatUnixDateTimeSmall, fromNowUnix} from '../middlewares/moment';
 import { useState } from 'react';
 import './Transactions.scss';
@@ -36,20 +40,27 @@ const Transactions = ({transactions, setTransactions}) => {
                     <p>From</p>
                     <p>To</p>
                     <p>Points</p>
-                </div>
+                </div>     
                 {transactions.map((transaction,i) => (
-                    <div className='transactions__body-container' key={transaction.id}>
-                        <div className="transactions__body-details" >
-                            <p>
-                                {format === 'fromNow' ? fromNowUnix(transaction.timestamp) 
-                                                    : formatUnixDateTimeSmall(transaction.timestamp)
-                                }
-                            </p>
-                            <p>{transaction.from_name}</p>
-                            <p>{transaction.to_name}</p>
-                            <p className="points">{transaction.points}</p>
-                        </div>
-                        <div className='more-details' id={`detail${i}`}>
+                    <Accordion className='transactions__body-container' key={transaction.id}>
+                        <AccordionSummary
+                        className="transactions__body-details"
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                        >
+                            <div>
+                                <p>
+                                    <span>Date: </span>
+                                    {format === 'fromNow' ? fromNowUnix(transaction.timestamp) 
+                                                        : formatUnixDateTimeSmall(transaction.timestamp)
+                                    }
+                                </p>
+                                <p><span>From: </span>{transaction.from_name}</p>
+                                <p><span>To: </span>{transaction.to_name}</p>
+                                <p className="points"><span>Points: </span>{transaction.points}</p>
+                            </div>
+                        </AccordionSummary>
+                        <AccordionDetails className='more-details'>
                             <div>
                                 <p>From:</p>
                                 <p>{transaction?.from}</p>
@@ -62,10 +73,11 @@ const Transactions = ({transactions, setTransactions}) => {
                                 <p>TID:</p>
                                 <p>{transaction?.id}</p>
                             </div>
-                        </div>
-                    </div>
+                        </AccordionDetails>
+                    </Accordion>
                 ))}
             </div>
+
         </div>
     );
 }

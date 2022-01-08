@@ -1,10 +1,8 @@
 .transactions {
-    width: 90%;
-    margin: 50px auto;
-    padding: 15px;
+    width: 100%;
+    padding: 25px;
     background: #2c2c2c;
     color: white;
-    border-radius: 8px;
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -29,6 +27,15 @@
     margin-left: 10px;
 }
 
+.transactions__body-container {
+    color: white !important;
+    border-radius: 4px !important;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background: black !important;
+}
+
 .transactions__body-info {
     display: flex;
     color: gray;
@@ -36,50 +43,105 @@
     padding: 10px;
 }
 
-.transactions__body-details {
-    display: flex;
-    background: black;
-    border-radius: 4px;
-    margin: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.transactions__body-details:hover {
-    background: #d8823c;
+.transactions__body-container:hover {
+    background: #d8823c !important;
     cursor: pointer;
-}
-
-.transactions__body-details:hover > .points {
-    color: white;
+    .points {
+        color: white !important;
+    }
+    span {
+        color: #444444;
+    }
 }
 
 .transactions__body-details .points {
     color: #d8823c;
 }
 
-.transactions__body p {
+.transactions__body-info p {
+    width: 25%;
+}
+
+.transactions__body-details div{
+    width: 100%;
+    display: flex;
+    span {
+        display: none;
+    }
+}
+
+.transactions__body-details p {
     width: 25%;
 }
 
 .transactions__body .more-details {
-    display: none;
-    margin: 0 5px;
-    margin-bottom: 25px;
     background: black;
     padding: 10px;
-    border-radius: 4px;
+    color: white;
     div {
         display: flex;
         padding: 5px;
         p:nth-of-type(1) {
+            font-weight: bold;
             color: gray;
         }
     }
 }
 
-.more-details-display {
-    display: block;
+.transactions__body .more-details p {
+    width: 25%;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    background: #d8823c;
+    .points {
+        color: white;
+    }
+    span {
+        color: #444444;
+    }
+}
+
+@media (max-width: 900px) {
+    .transactions__header {
+        margin-bottom: 20px;
+    }
+    .transactions__body-info {
+        display: none;
+    }
+    .transactions__body-details div{
+        flex-direction: column;
+        p {
+            display: flex;
+            width: auto;
+            padding: 5px;
+        }
+        span {
+            margin-right: 7px;
+            display: inline;
+            color: gray;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .transactions {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+    .transactions__header {
+        flex-direction: column;
+        align-items: flex-start;
+        .filter {
+            margin-left: 0;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+    }
 }
