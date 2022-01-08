@@ -1,0 +1,85 @@
+.transactions {
+    width: 90%;
+    margin: 50px auto;
+    padding: 15px;
+    background: #2c2c2c;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.transactions h1 {
+    color: #d8823c;
+}
+
+.transactions__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transactions__header .filter {
+    background: #d8823c;
+    color: white;
+    font-size: 15px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.transactions__body-info {
+    display: flex;
+    color: gray;
+    margin: 5px;
+    padding: 10px;
+}
+
+.transactions__body-details {
+    display: flex;
+    background: black;
+    border-radius: 4px;
+    margin: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.transactions__body-details:hover {
+    background: #d8823c;
+    cursor: pointer;
+}
+
+.transactions__body-details:hover > .points {
+    color: white;
+}
+
+.transactions__body-details .points {
+    color: #d8823c;
+}
+
+.transactions__body p {
+    width: 25%;
+}
+
+.transactions__body .more-details {
+    display: none;
+    margin: 0 5px;
+    margin-bottom: 25px;
+    background: black;
+    padding: 10px;
+    border-radius: 4px;
+    div {
+        display: flex;
+        padding: 5px;
+        p:nth-of-type(1) {
+            color: gray;
+        }
+    }
+}
+
+.more-details-display {
+    display: block;
+}
