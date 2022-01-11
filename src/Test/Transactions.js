@@ -1,11 +1,9 @@
+import './Transactions.scss';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { formatUnixDateTimeSmall, fromNowUnix} from '../middlewares/moment';
-import { useState } from 'react';
-import './Transactions.scss';
-import { useEffect } from 'react';
+import { formatUnixDateTimeSmall, fromNowUnix } from '../middlewares/moment';
+import { useState, useEffect } from 'react';
 
 const Transactions = ({transactions, setTransactions}) => {
     const [key, setKey] = useState('sortBy');
@@ -41,7 +39,7 @@ const Transactions = ({transactions, setTransactions}) => {
                     <p>To</p>
                     <p>Points</p>
                 </div>     
-                {transactions.map((transaction,i) => (
+                {transactions.map(transaction => (
                     <Accordion className='transactions__body-container' key={transaction.id}>
                         <AccordionSummary
                         className="transactions__body-details"

@@ -1,0 +1,165 @@
+.profile {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin: 70px auto;
+    background: #e8e8e8;
+    padding-bottom: 30px;
+    .profile__theme{
+        width: 100%;
+        height: 200px;
+        background: brown;
+        position: relative;
+        .profile__theme_name {
+            width: 300px;
+            position: absolute;
+            bottom: 10px;
+            left: 370px;
+            p:nth-of-type(1) {
+                font-size: 30px;
+                color: white;
+                margin-bottom: 5px;
+            }
+            p:nth-of-type(2), p:nth-of-type(3) {
+                font-size: 12px;
+                font-weight: bold;
+                color: #a5a5a5;
+                margin-bottom: 5px;
+                i {
+                    font-size: 15px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .profile__main {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 20%;
+            background: white;
+            .profile__main_image {
+                width: 100%;
+                height: 250px;
+                background-image: url('http://www.goodmorningimagesdownload.com/wp-content/uploads/2020/07/Beautiful-Profile-Images-4.jpg');
+                background-position: center;
+            }
+            .profile__main_info {
+                padding: 15px;
+                .profile__main_info_header {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                .profile__main_info_body {
+                    font-size: 14px;
+                    color: gray;
+                    padding-bottom: 25px;
+                    border-bottom: 1.5px solid #d4d4d4;
+                }
+            }
+            .profile__main_following {
+                margin-top: 60px;
+                p {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                    color: gray;
+                    strong {
+                        color: black;
+                        font-weight: 'bold';
+                    }
+                }
+            }
+        }
+    }
+    .profile__body {
+        margin-top: 18px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: 'center';
+        .profile__body_social {
+            background: white;
+            text-align: center;
+            width: 35%;
+            margin-right: 20px;
+            .profile__body_social_header {
+                width: 100%;
+                padding: 10px;
+                background: orange;
+                h1 {
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+            .profile__body__social_set {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                div {
+                    text-align: center;
+                    padding: 15px;
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    cursor: pointer;
+                    p {
+                        font-size: 15px;
+                        font-weight: bold;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            img {
+                width: 30px;
+            }
+        }
+        .profile__body_form {
+            width: 35%;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            .container {
+                margin: 10px;
+                h1 {
+                    margin-bottom: 10px;
+                }
+                .MuiInputBase-input {
+                    font-size: 15px;
+                    color: orange;
+                    font-weight: bold;
+                }
+                .input {
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+                p:nth-of-type(1) {
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+                    font-size: 13px;
+                }
+                p:nth-of-type(2) {
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                    font-size: 13px;
+                }
+                .MuiButton-containedPrimary {
+                    margin-bottom: 35px;
+                    font-size: 13px;
+                    font-weight: bold;
+                    background: orange;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1600px) {
+    .profile .profile__theme .profile__main {
+        width: 300px;
+    }
+    .profile .profile__body .profile__body_form, .profile .profile__body .profile__body_social {
+        width: 320px;
+    }
+}

@@ -10,10 +10,7 @@ const Test = () => {
 
     const [loading, setLoading] = useState(true);
 
-    const handleTransactions = (res) => {
-        console.log(res.data.data.transactions);
-        setTransactions(res.data.data.transactions);
-    }
+    const handleTransactions = res => setTransactions(res.data.data.transactions);
 
     useEffect(() => {
         postRequest('/getUserTransactions', '', (res) => handleTransactions(res), access_token, setLoading);
