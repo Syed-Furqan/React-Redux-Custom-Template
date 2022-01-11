@@ -7,12 +7,20 @@ const Profile = () => {
         <div className='profile'>
             <div className='profile__theme'>
                 <div className='profile__theme_name'>
-                    <p>Syed Furqan</p>
-                    <p><i className='fas fa-map-marker-alt'></i>Srinagar, Jammu and Kashmir</p>
-                </div>
-                <div className='profile__main'>
-                    <div className='profile__main_image'>
+                    <div>
+                        <p>Syed Furqan Bukhari</p>
+                        <p><i className="fas fa-briefcase"></i>BackEnd Engineer</p>
                     </div>
+                    <div>
+                        <p><i className="fas fa-map-marker-alt"></i>Srinagar, Jammu and Kashmir</p>
+                        <p><i className="fas fa-envelope"></i>syedfurqan2001@gmail.com</p>
+                    </div>
+                </div>
+                <div className='profile__main_image'>
+                </div>
+            </div>
+            <div className='profile__body'>
+                <div className='profile__main'>
                     <div className='profile__main_info'>
                         <p className='profile__main_info_header'>About</p>
                         <p className='profile__main_info_body'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut molestiae obcaecati hic natus, 
@@ -25,8 +33,6 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='profile__body'>
                 <div className='profile__body_social'>
                         <div className='profile__body_social_header'>
                             <h1>Social Wall</h1>
@@ -111,17 +117,17 @@ const Profile = () => {
                             </div>
                             <div>
                                 <img 
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/198px-Instagram_logo_2016.svg.png" 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/1200px-Medium_logo_Monogram.svg.png" 
                                     alt="" 
                                 />
-                                <p>3047</p>
+                                <p>89</p>
                             </div>
                             <div>
                                 <img 
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/768px-Twitter-logo.svg.png" 
+                                    src="https://brandlogos.net/wp-content/uploads/2016/11/dribbble-logo-preview.png" 
                                     alt="" 
                                 />
-                                <p>897</p>
+                                <p>97</p>
                             </div>
                         </div>
                     </div>
