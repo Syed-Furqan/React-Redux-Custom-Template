@@ -1,0 +1,109 @@
+$sidebar_width: 17.5%;
+
+.sidebar {
+    width: $sidebar_width;
+    background: white;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    .sidebar__brand {
+        padding: 30px 35px;
+        p:nth-of-type(1) {
+            font-size: 15px;
+            span {
+                font-weight: bold;
+                color: orange;
+            }
+        }
+        p:nth-of-type(2) {
+            font-weight: bold;
+            margin-top: 3px;
+            font-size: 13px;
+        }
+    }
+    .sidebar__profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        > div:nth-of-type(1) {
+            display: flex;
+            align-items: center;
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            p {
+                font-weight: bold;
+                font-size: 13px;
+                margin-left: 5px;
+            }
+        }
+    }
+    .sidebar__links {
+        margin-top: 18%;
+        display: flex;
+        flex-direction: column;
+        button {
+            padding: 5px 0;
+            margin: 15px 0;
+            padding-left: 35px;
+            font-size: 11px;
+            text-align: left;
+            color: gray;
+            font-weight: bold;
+            cursor: pointer;
+            &:focus {
+                border-right: 3px solid #5d99ff;
+                color: #5d99ff;
+                font-weight: bold;
+            }
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+    .sidebar__links_bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30%;
+        margin: 15px 20px;
+        margin-left: 35px;
+        padding-top: 15px;
+        border-top: 1px solid gray;
+        color: gray;
+        font-weight: bold;
+        cursor: pointer;
+        p {
+            font-size: 12px;
+            i {
+                margin-right: 5px;
+            }
+        }
+        div {
+            display: flex;
+            align-items: center;
+            p {
+                color: #328bd4;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+                background: #5d99ff;
+                border-radius: 50%;
+                i {
+                    color: white;
+                }
+            }
+        }
+    }
+}

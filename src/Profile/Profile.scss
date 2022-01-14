@@ -7,7 +7,7 @@
     .profile__theme{
         width: 100%;
         height: 200px;
-        background: brown;
+        background: #733e3e;
         position: relative;
         .profile__theme_name {
             display: flex;
@@ -57,8 +57,9 @@
             left: 50px;
             width: 170px;
             height: 170px;
-            background-image: url('http://www.goodmorningimagesdownload.com/wp-content/uploads/2020/07/Beautiful-Profile-Images-4.jpg');
+            background-image: url('https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo=');
             background-position: center;
+            background-size: cover;
             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         }
     }

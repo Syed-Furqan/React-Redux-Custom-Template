@@ -1,20 +1,16 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import routes from './routes/routes'
-import './App.css'
-import Test from './Test/Test'
-import Profile from './Profile/Profile'
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css';
+import Dashboard from './Dashboard/Dashboard';
+import Sidebar from './Sidebar/Sidebar';
 
 const App = () => {
   return (
     <div className="app">
       <Router>
+        <Sidebar />
         <Switch>
-          <Route path='/profile' component={Profile}/>
-          <Route path='/test' component={Test}/>
-          {routes.map(({ path, Component, props }) =>
-            <Route key={path} path={path} component={Component} {...props} />
-          )}
+          <Route path='/' component={Dashboard}/>
         </Switch>
       </Router>
     </div>

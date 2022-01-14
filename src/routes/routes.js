@@ -6,4 +6,4 @@ const routes = [
     { path: '', Component: Page404, props: {} },
 ];
 
-export default routes
+export default routes;

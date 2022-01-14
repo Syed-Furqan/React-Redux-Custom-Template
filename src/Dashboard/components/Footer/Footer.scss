@@ -1,0 +1,144 @@
+.dashboard__main_footer {
+    background: white;
+    border-radius: 16px;
+    margin-top: 30px;
+    font-size: 20px;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        padding-bottom: 0;
+        .left {
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .right {
+            display: flex;
+            font-size: 12px;
+            p:nth-of-type(1) {
+                margin-right: 10px;
+                padding-right: 10px;
+                border-right: 1px solid #d0d0d0;
+                color: #5d99ff;
+            }
+        }
+    }
+    .main {
+        padding: 30px 40px;
+        .main__header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid gray;
+            font-size: 14px;
+            font-weight: bold;
+            color: #656565;
+            .title {
+                width: 10%;
+            }
+            .details {
+                width: 22%;
+            }
+            .email {
+                width: 25%;
+                padding-left: 2%;
+            }
+            .deadline {
+                width: 33%;
+            }
+        }
+        .main__body {
+            .main__body_offer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0;
+                border-bottom: 1px solid rgb(201, 201, 201);
+                font-weight: bold;
+                color: #656565;
+                .title {
+                    width: 10%;
+                }
+                .details {
+                    width: 22%;
+                    p:nth-of-type(2) {
+                        margin-top: 10px;
+                        font-weight: normal;
+                    }
+                }
+                .email {
+                    width: 25%;
+                    padding-left: 2%;
+                }
+                .deadline {
+                    width: 33%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .left {
+                        width: 30%;
+                    }
+                    .right {
+                        text-align: center;
+                        width: 70%;
+                        .accepted {
+                            color: #22c722;
+                            font-size: 12px;
+                        }
+                        .rejected {
+                            color: red;
+                            font-size: 12px;
+                        }
+                        .btn {
+                            .btn__accept {
+                                color: #22c722;
+                                font-weight: bold;
+                                font-size: 12px;
+                                padding: 5px 15px;
+                                border-radius: 4px;
+                                margin: 0 5px;
+                                background: rgb(226, 255, 197);
+                                &:hover {
+                                    background: rgb(226, 255, 197);
+                                    cursor: pointer;
+                                }
+                            }
+                            .btn__reject {
+                                color: red;
+                                font-weight: bold;
+                                font-size: 12px;
+                                border-radius: 4px;
+                                padding: 5px 15px;
+                                margin: 0 5px;
+                                background: rgb(255, 181, 196);
+                                &:hover {
+                                    background: rgb(255, 181, 196);
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 2000px) {
+    .dashboard__main_footer {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1700px) {
+    .dashboard__main_footer {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .dashboard__main_footer {
+        font-size: inherit;
+    }
+}

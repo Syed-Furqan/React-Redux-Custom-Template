@@ -9,7 +9,7 @@ const Profile = () => {
                 <div className='profile__theme_name'>
                     <div>
                         <p>Syed Furqan Bukhari</p>
-                        <p><i className="fas fa-briefcase"></i>BackEnd Engineer</p>
+                        <p><i className="fas fa-briefcase"></i>CISCO Network Engineer</p>
                     </div>
                     <div>
                         <p><i className="fas fa-map-marker-alt"></i>Srinagar, Jammu and Kashmir</p>
